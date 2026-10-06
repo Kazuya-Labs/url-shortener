@@ -1,0 +1,6 @@
+.env
+drizzle
+node_modules
+pnpm-lock.yaml
+pnpm-workspace.yaml
+sqlite.db
