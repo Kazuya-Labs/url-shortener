@@ -6,7 +6,6 @@ Content-Type: application/json
   "url": "https://kazuya-labs.com"
 }
 
-
 ####
 GET http://localhost:3000/api/v1/shorten/723c55507a
 
