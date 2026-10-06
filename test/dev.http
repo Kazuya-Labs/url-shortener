@@ -1,0 +1,28 @@
+###
+POST http://localhost:3000/api/v1/shorten
+Content-Type: application/json
+
+{
+  "url": "https://kazuya-labs.com"
+}
+
+
+####
+GET http://localhost:3000/api/v1/shorten/723c55507a
+
+### 
+GET http://localhost:3000/api/v1/shorten/723c55507a/stats
+
+###
+# http 
+PUT http://localhost:3000/api/v1/shorten/723c55507a
+Content-Type: application/json
+
+{
+"url":"https://kazu.com"
+}
+
+####
+DELETE http://localhost:3000/api/v1/shorten/97c5f865f7
+Content-Type : application/json
+
