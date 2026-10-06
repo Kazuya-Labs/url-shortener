@@ -23,8 +23,8 @@ class ShortenService {
     const results = db
       .insert(urls)
       .values({
-        longUrl,
         code: randomCode,
+        url: longUrl,
         views: 0,
       })
       .returning();
@@ -39,8 +39,8 @@ class ShortenService {
   static async edit(longUrl: string) {
     return db
       .update(urls)
-      .set({ longUrl: longUrl })
-      .where(eq(urls.longUrl, longUrl))
+      .set({ url: longUrl })
+      .where(eq(urls.url, longUrl))
       .returning();
   }
 
