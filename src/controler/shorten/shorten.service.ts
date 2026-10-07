@@ -21,7 +21,7 @@ class ShortenService {
         retry++;
       }
 
-      if (retry >= 3) return [];
+      if (retry >= 3) return undefined;
 
       const results = db
         .insert(urls)
@@ -36,7 +36,7 @@ class ShortenService {
       return results;
     } catch (error) {
       log(error);
-      return [];
+      throw error;
     }
   }
 
