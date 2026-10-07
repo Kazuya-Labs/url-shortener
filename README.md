@@ -74,20 +74,16 @@ The endpoint should validate the request body and return a `201` Created status 
 
 ```json
 {
-  {
-  success : true,
-  message : "newly Created short url",
-  data : {
-  {
-  id: "1",
+  "success" : true,
+  "message" : "newly Created short url",
+  "data" : {
+  "id": "1",
   "url": "https://www.example.com/some/long/url",
   "code": "abc123",
   "createdAt": "2021-09-01T12:00:00Z",
   "updatedAt": "2021-09-01T12:00:00Z"
-
   }
 }
-
 ```
 
 ---
