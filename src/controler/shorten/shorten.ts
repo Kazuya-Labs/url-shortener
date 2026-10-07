@@ -25,7 +25,7 @@ route.post(
     try {
       const { url } = req.body;
       const resultsService = await ShortenService.create(url);
-      console.log(resultsService);
+
       if (!resultsService) return response.error(res);
 
       const { views, ...results } = resultsService;

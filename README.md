@@ -42,6 +42,22 @@ pnpm run db:generate
 
 ---
 
+Build
+
+```sh
+pnpm run build
+```
+
+---
+
+start
+
+```sh
+pnpm run start
+```
+
+---
+
 ## Create Short URL
 
 Create a new short URL using the POST method
@@ -58,12 +74,20 @@ The endpoint should validate the request body and return a `201` Created status 
 
 ```json
 {
-  "id": "1",
+  {
+  success : true,
+  message : "newly Created short url",
+  data : {
+  {
+  id: "1",
   "url": "https://www.example.com/some/long/url",
   "code": "abc123",
   "createdAt": "2021-09-01T12:00:00Z",
   "updatedAt": "2021-09-01T12:00:00Z"
+
+  }
 }
+
 ```
 
 ---
@@ -79,11 +103,15 @@ The endpoint should return a `200` OK status code with the original URL i.e.
 
 ```json
 {
-  "id": "1",
-  "url": "https://www.example.com/some/long/url",
-  "code": "abc123",
-  "createdAt": "2021-09-01T12:00:00Z",
-  "updatedAt": "2021-09-01T12:00:00Z"
+  "success": true,
+  "message": "success get abc123",
+  "data": {
+    "id": "1",
+    "url": "https://www.example.com/some/long/url",
+    "code": "abc123",
+    "createdAt": "2021-09-01T12:00:00Z",
+    "updatedAt": "2021-09-01T12:00:00Z"
+  }
 }
 ```
 
@@ -113,11 +141,15 @@ The endpoint should validate the request body and return a `200` OK status code 
 
 ```json
 {
-  "id": "1",
-  "url": "https://www.example.com/some/updated/url",
-  "code": "abc123",
-  "createdAt": "2021-09-01T12:00:00Z",
-  "updatedAt": "2021-09-01T12:30:00Z"
+  "success": true,
+  "message": "success updated abc123",
+  "data": {
+    "id": "1",
+    "url": "https://www.example.com/some/updated/url",
+    "code": "abc123",
+    "createdAt": "2021-09-01T12:00:00Z",
+    "updatedAt": "2021-09-01T12:30:00Z"
+  }
 }
 ```
 
@@ -149,12 +181,16 @@ The endpoint should return a `200` OK status code with the statistics i.e.
 
 ```json
 {
-  "id": "1",
-  "views": 10,
-  "url": "https://www.example.com/some/long/url",
-  "code": "abc123",
-  "createdAt": "2021-09-01T12:00:00Z",
-  "updatedAt": "2021-09-01T12:00:00Z"
+  "success": true,
+  "message": "success get abc123",
+  "data": {
+    "id": "1",
+    "views": 10,
+    "url": "https://www.example.com/some/long/url",
+    "code": "abc123",
+    "createdAt": "2021-09-01T12:00:00Z",
+    "updatedAt": "2021-09-01T12:00:00Z"
+  }
 }
 ```
 
